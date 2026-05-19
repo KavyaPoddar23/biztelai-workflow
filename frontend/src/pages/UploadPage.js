@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const API = 'http://localhost:8000';
+import API from '../config';
 
 function UploadPage() {
   const [selectedFile, setSelectedFile] = useState(null);

@@ -5,7 +5,7 @@ import {
   Tooltip, ResponsiveContainer, Legend, LineChart, Line
 } from 'recharts';
 
-const API = 'http://localhost:8000';
+import API from '../config';
 
 function StatCard({ title, value, subtitle, color, icon }) {
   return (
