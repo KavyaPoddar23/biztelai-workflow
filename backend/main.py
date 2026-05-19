@@ -22,8 +22,9 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
     allow_credentials=False,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],
+    expose_headers=["*"]
 )
 
 # Serve uploaded files as static files
@@ -34,6 +35,7 @@ app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
 @app.on_event("startup")
 def startup():
     init_db()
+    os.makedirs("uploads", exist_ok=True)
 
 # Health check
 @app.get("/")
