@@ -42,10 +42,10 @@ function ReviewPage() {
     { key: 'time_taken', label: 'Time Taken (hrs)' },
   ];
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
 useEffect(() => {
-    fetchUpload();
-    fetchRecords();
+    fetchUpload(); // eslint-disable-line
+    fetchRecords(); // eslint-disable-line
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [uploadId]);
 
   const fetchUpload = async () => {

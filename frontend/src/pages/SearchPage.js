@@ -19,9 +19,9 @@ function SearchPage() {
   const [searched, setSearched] = useState(false);
 
   // Load all records on first open
-// eslint-disable-next-line react-hooks/exhaustive-deps
 useEffect(() => {
-    handleSearch();
+    handleSearch(); // eslint-disable-line
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSearch = async () => {
